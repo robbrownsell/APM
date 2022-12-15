@@ -26,7 +26,8 @@ export class ProductDetailComponent implements OnInit {
         this.product = products.filter((product:IProduct)=> {
           return product.productId==id;
         }).at(0)
-      }
+      },
+      error: err => console.error(err)
     })
   }
 
